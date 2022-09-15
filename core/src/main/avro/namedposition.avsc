@@ -1,0 +1,8 @@
+{"type":"record",
+  "name":"NamedPosition",
+  "namespace":"com.avroGenerator",
+  "fields":[
+    {"name":"latitude","type":"double"},
+    {"name":"longitude","type":"double"},
+    {"name":"name", "type":"string"}
+  ]}

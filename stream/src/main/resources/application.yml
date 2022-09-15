@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    template:
+      default-topic: "named-positions"
+    streams:
+      application-id: "position-stream"
+      bootstrap.server: "kafka:9092"

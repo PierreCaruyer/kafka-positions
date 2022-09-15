@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap.servers: "kafka:9092"
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+      auto-offset-reset: earliest
+      properties:
+        schema.registry.url: "http://127.0.0.1:8081"
+        linger.ms: 0
+        specific.avro.reader: true
+
+
+logging:
+  level:
+    org.daveo: INFO
+    org.springframework: INFO

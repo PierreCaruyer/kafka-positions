@@ -15,20 +15,20 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 public class PositionSerde {
     private PositionSerde() {}
 
-    public static Serde<Position> Position() {
+    /*public static Serde<Position> Position() {
         JsonSerializer<Position> serializer = new JsonSerializer<>();
         JsonDeserializer<Position> deserializer = new JsonDeserializer<>(Position.class);
         return Serdes.serdeFrom(serializer, deserializer);
-    }
+    }*/
 
     public static Serde<GenericRecord> GenericRecord() {
         SchemaRegistryClient schemaRegistry = new CachedSchemaRegistryClient("http://127.0.0.1:8081", 30);
         return new GenericAvroSerde(schemaRegistry);
     }
 
-    public static Serde<NamedPosition> NamedPosition() {
+    /*public static Serde<NamedPosition> NamedPosition() {
         JsonSerializer<NamedPosition> serializer = new JsonSerializer<>();
         JsonDeserializer<NamedPosition> deserializer = new JsonDeserializer<>(NamedPosition.class);
         return Serdes.serdeFrom(serializer, deserializer);
-    }
+    }*/
 }

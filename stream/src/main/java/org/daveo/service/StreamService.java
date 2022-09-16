@@ -30,7 +30,7 @@ public class StreamService {
     private static final Serde<String> STRING_SERDE = Serdes.String();
     private static final Serde<GenericRecord> AVRO_SERDE = PositionSerde.GenericRecord();
 
-    private static final String dictionnaryPath = "/home/pierre/Documents/words";
+    private static final String dictionnaryPath = "classpath:words";
     private final List<String> words;
     private final Random random;
 
